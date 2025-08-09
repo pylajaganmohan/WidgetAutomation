@@ -37,6 +37,11 @@ public class HomePage {
 			return new ButtonWidget(page);
 		}
 		
+		public SpinBoxWidget openSpinBoxWidget() {
+			page.click(spinBox);
+			return new SpinBoxWidget(page);
+		}
+		
 		public boolean ID_106552() {
 			return page.locator(spinBox).isVisible();
 		}

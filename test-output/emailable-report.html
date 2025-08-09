@@ -8,69 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">16</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">103,526</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">17,803</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.tests.ActionBarWidgetTest</td><td><a href="#m0">validateBackGroundColor</a></td><td rowspan="1">1754730397747</td><td rowspan="1">30490</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="14">com.tests.ButtonTest</td><td><a href="#m1">TC_ID_106538</a></td><td rowspan="1">1754730456135</td><td rowspan="1">682</td></tr><tr class="passedeven"><td><a href="#m2">TC_ID_106539</a></td><td rowspan="1">1754730481626</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m3">TC_ID_106540</a></td><td rowspan="1">1754730430197</td><td rowspan="1">2780</td></tr><tr class="passedeven"><td><a href="#m4">TC_ID_106541</a></td><td rowspan="1">1754730434742</td><td rowspan="1">1338</td></tr><tr class="passedeven"><td><a href="#m5">TC_ID_106542</a></td><td rowspan="1">1754730437885</td><td rowspan="1">2625</td></tr><tr class="passedeven"><td><a href="#m6">TC_ID_106543</a></td><td rowspan="1">1754730442184</td><td rowspan="1">2625</td></tr><tr class="passedeven"><td><a href="#m7">TC_ID_106544</a></td><td rowspan="1">1754730446764</td><td rowspan="1">2790</td></tr><tr class="passedeven"><td><a href="#m8">TC_ID_106545</a></td><td rowspan="1">1754730451258</td><td rowspan="1">3022</td></tr><tr class="passedeven"><td><a href="#m9">TC_ID_106546</a></td><td rowspan="1">1754730459212</td><td rowspan="1">1890</td></tr><tr class="passedeven"><td><a href="#m10">TC_ID_106547</a></td><td rowspan="1">1754730462913</td><td rowspan="1">2164</td></tr><tr class="passedeven"><td><a href="#m11">TC_ID_106548</a></td><td rowspan="1">1754730466938</td><td rowspan="1">1401</td></tr><tr class="passedeven"><td><a href="#m12">TC_ID_106549</a></td><td rowspan="1">1754730470155</td><td rowspan="1">1729</td></tr><tr class="passedeven"><td><a href="#m13">TC_ID_106550</a></td><td rowspan="1">1754730473754</td><td rowspan="1">2363</td></tr><tr class="passedeven"><td><a href="#m14">TC_ID_106551</a></td><td rowspan="1">1754730478032</td><td rowspan="1">1714</td></tr><tr class="passedodd"><td rowspan="2">com.tests.HomePageTest</td><td><a href="#m15">HomePageTitleTest</a></td><td rowspan="1">1754730483560</td><td rowspan="1">66</td></tr><tr class="passedodd"><td><a href="#m16">TC_ID_106552</a></td><td rowspan="1">1754730485793</td><td rowspan="1">59</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.tests.SpinBoxTest</td><td><a href="#m0">TC_ID_106558</a></td><td rowspan="1">1754740612769</td><td rowspan="1">2198</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.tests.ActionBarWidgetTest#validateBackGroundColor</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\pylaj\AppData\Local\Temp\playwright-java-6750104843688794847\package\lib\server\progress.js:65:26)
-    at FrameDispatcher._runCommand (C:\Users\pylaj\AppData\Local\Temp\playwright-java-6750104843688794847\package\lib\server\dispatchers\dispatcher.js:91:31)
-    at DispatcherConnection.dispatch (C:\Users\pylaj\AppData\Local\Temp\playwright-java-6750104843688794847\package\lib\server\dispatchers\dispatcher.js:322:39)
-}
-Call log:
--   - waiting for locator(&quot;div.xrx-action-bar-label-container&quot;)
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
-	at com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:985)
-	at com.microsoft.playwright.impl.FrameImpl.waitForSelector(FrameImpl.java:975)
-	at com.microsoft.playwright.impl.LocatorImpl.elementHandle(LocatorImpl.java:211)
-	at com.microsoft.playwright.impl.LocatorImpl.lambda$withElement$0(LocatorImpl.java:80)
-	at com.microsoft.playwright.impl.ChannelOwner.withTitle(ChannelOwner.java:98)
-	at com.microsoft.playwright.impl.LocatorImpl.withElement(LocatorImpl.java:71)
-	at com.microsoft.playwright.impl.LocatorImpl.evaluate(LocatorImpl.java:226)
-	at com.microsoft.playwright.Locator.evaluate(Locator.java:2879)
-	at com.microsoft.playwright.Locator.evaluate(Locator.java:2910)
-	at com.pages.ActionBarWidget.getColor(ActionBarWidget.java:37)
-	at com.tests.ActionBarWidgetTest.validateBackGroundColor(ActionBarWidgetTest.java:12)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\pylaj\AppData\Local\Temp\playwright-java-6750104843688794847\package\lib\server\progress.js:65:26)
-    at FrameDispatcher._runCommand (C:\Users\pylaj\AppData\Local\Temp\playwright-java-6750104843688794847\package\lib\server\dispatchers\dispatcher.js:91:31)
-    at DispatcherConnection.dispatch (C:\Users\pylaj\AppData\Local\Temp\playwright-java-6750104843688794847\package\lib\server\dispatchers\dispatcher.js:322:39)
-}
-Call log:
--   - waiting for locator(&quot;div.xrx-action-bar-label-container&quot;)
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
-	... 39 more
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.tests.ButtonTest#TC_ID_106538</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.tests.ButtonTest#TC_ID_106539</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.tests.ButtonTest#TC_ID_106540</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.tests.ButtonTest#TC_ID_106541</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.tests.ButtonTest#TC_ID_106542</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.tests.ButtonTest#TC_ID_106543</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.tests.ButtonTest#TC_ID_106544</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.tests.ButtonTest#TC_ID_106545</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">com.tests.ButtonTest#TC_ID_106546</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">com.tests.ButtonTest#TC_ID_106547</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">com.tests.ButtonTest#TC_ID_106548</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">com.tests.ButtonTest#TC_ID_106549</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">com.tests.ButtonTest#TC_ID_106550</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">com.tests.ButtonTest#TC_ID_106551</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">com.tests.HomePageTest#HomePageTitleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">com.tests.HomePageTest#TC_ID_106552</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.tests.SpinBoxTest#TC_ID_106558</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
