@@ -2,12 +2,15 @@ package com.base;
 
 import java.util.Properties;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import com.factory.PlaywrightFactory;
 import com.microsoft.playwright.Page;
 import com.pages.ActionBarWidget;
+import com.pages.ButtonWidget;
 import com.pages.HomePage;
 
 public class BaseTest {
@@ -18,8 +21,9 @@ public class BaseTest {
 	protected Properties prop;
 	protected HomePage homePage;
 	protected ActionBarWidget actionBarPage;
+	protected ButtonWidget button;
 
-	@BeforeTest
+	@BeforeMethod
 	public void setUp() {
 		factory = new PlaywrightFactory();
 		prop = factory.init_prop();
@@ -27,7 +31,7 @@ public class BaseTest {
 		homePage = new HomePage(page);
 	}
 	
-	@AfterTest
+	@AfterMethod
 	public void tearDown() {
 		page.context().browser().close();
 	}

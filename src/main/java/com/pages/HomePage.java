@@ -1,6 +1,5 @@
 package com.pages;
 
-import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
 public class HomePage {
@@ -18,6 +17,7 @@ public class HomePage {
 		private String carousel= "//button[text()='Carousel']";
 		private String keyboradOrPad= "//button[text()='Keyboard/ pad']";
 		private String levelIndicator= "//button[text()='Level Indicator']";
+		private String spinBox = "//button[text()='Spin Box']";
 		
 		public HomePage(Page page) {
 			this.page = page;
@@ -28,11 +28,17 @@ public class HomePage {
 		}
 		
 		public ActionBarWidget openActionBar() {
-//			Locator locator = page.locator(actionBar);
-//			String backgroundColor = (String) locator.evaluate("el => getComputedStyle(el).backgroundColor");
-//			System.out.println("Button color: " + backgroundColor);
 			page.click(actionBar);
 			return new ActionBarWidget(page);
+		}
+		
+		public ButtonWidget openButtonWidget() {
+			page.click(button);
+			return new ButtonWidget(page);
+		}
+		
+		public boolean ID_106552() {
+			return page.locator(spinBox).isVisible();
 		}
 		
 		

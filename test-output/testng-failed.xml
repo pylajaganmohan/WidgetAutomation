@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tests.ActionBarWidgetTest">
+      <class name="com.tests.ButtonTest">
         <methods>
-          <include name="validateBackGroundColor"/>
+          <include name="tearDown"/>
+          <include name="TC_ID_106547"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.tests.ActionBarWidgetTest -->
+      </class> <!-- com.tests.ButtonTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

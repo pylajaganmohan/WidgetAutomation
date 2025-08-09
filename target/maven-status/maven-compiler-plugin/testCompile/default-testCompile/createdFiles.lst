@@ -1,2 +1,3 @@
 com\base\BaseTest.class
 com\tests\HomePageTest.class
+com\tests\ActionBarWidgetTest.class

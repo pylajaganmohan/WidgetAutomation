@@ -3,6 +3,7 @@ package com.factory;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Properties;
 
@@ -13,25 +14,25 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
 public class PlaywrightFactory {
-	ThreadLocal<Playwright> playwright = new ThreadLocal<Playwright>();
-	ThreadLocal<Browser> browser = new ThreadLocal<Browser>();
-	ThreadLocal<BrowserContext> context = new ThreadLocal<BrowserContext>();
-	ThreadLocal<Page> page = new ThreadLocal<Page>();
+	private static ThreadLocal<Playwright> playwright = new ThreadLocal<Playwright>();
+	private static ThreadLocal<Browser> browser = new ThreadLocal<Browser>();
+	private static ThreadLocal<BrowserContext> context = new ThreadLocal<BrowserContext>();
+	private static ThreadLocal<Page> page = new ThreadLocal<Page>();
 	Properties prop;
 
-	public Playwright getPlaywright() {
+	public static Playwright getPlaywright() {
 		return playwright.get();
 	}
 
-	public Browser getBrowser() {
+	public static Browser getBrowser() {
 		return browser.get();
 	}
 
-	public BrowserContext getContext() {
+	public static BrowserContext getContext() {
 		return context.get();
 	}
 
-	public Page getPage() {
+	public static Page getPage() {
 		return page.get();
 	}
 
@@ -67,7 +68,8 @@ public class PlaywrightFactory {
 
 		context.set(getBrowser().newContext(new Browser.NewContextOptions().setViewportSize(1024, 600)));
 		page.set(getContext().newPage());
-		System.out.println("http://" + prop.getProperty("serverIp") + prop.getProperty("url"));
+		// System.out.println("http://" + prop.getProperty("serverIp") +
+		// prop.getProperty("url"));
 		getPage().navigate("http://" + prop.getProperty("serverIp") + prop.getProperty("url"));
 		return getPage();
 	}
@@ -84,5 +86,11 @@ public class PlaywrightFactory {
 		}
 		return prop;
 
+	}
+
+	public static String takeScreenshot() {
+		String path = System.getProperty("user.dir") + "/screenshot/" + System.currentTimeMillis() + ".png";
+		getPage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
+		return path;
 	}
 }
