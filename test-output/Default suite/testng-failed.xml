@@ -5,8 +5,8 @@
     <classes>
       <class name="com.tests.SpinBoxTest">
         <methods>
-          <include name="TC_ID_106553"/>
           <include name="tearDown"/>
+          <include name="TC_ID_106569"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.tests.SpinBoxTest -->

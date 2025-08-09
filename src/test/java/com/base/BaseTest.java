@@ -3,9 +3,8 @@ package com.base;
 import java.util.Properties;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.asserts.SoftAssert;
 
 import com.factory.PlaywrightFactory;
 import com.microsoft.playwright.Page;
@@ -24,6 +23,7 @@ public class BaseTest {
 	protected ActionBarWidget actionBarPage;
 	protected ButtonWidget button;
 	protected SpinBoxWidget spinBox;
+	protected SoftAssert softAssert;
 
 	@BeforeMethod
 	public void setUp() {
