@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="17" total="18" passed="1" failed="0" skipped="0">
+<testng-results ignored="10" total="11" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-10T00:26:36 IST" name="Default suite" finished-at="2025-08-10T00:26:51 IST" duration-ms="15783">
+  <suite started-at="2025-08-10T21:58:54 IST" name="Default suite" finished-at="2025-08-10T21:59:13 IST" duration-ms="18194">
     <groups>
     </groups>
-    <test started-at="2025-08-10T00:26:36 IST" name="Default test" finished-at="2025-08-10T00:26:51 IST" duration-ms="15783">
-      <class name="com.tests.SpinBoxTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.SpinBoxTest@409bf450]" started-at="2025-08-10T00:26:36 IST" name="setUp" finished-at="2025-08-10T00:26:50 IST" duration-ms="14289" status="PASS">
+    <test started-at="2025-08-10T21:58:54 IST" name="Default test" finished-at="2025-08-10T21:59:13 IST" duration-ms="18194">
+      <class name="com.tests.TumblerTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.TumblerTest@6aeb35e6]" started-at="2025-08-10T21:58:54 IST" name="setUp" finished-at="2025-08-10T21:59:10 IST" duration-ms="15896" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC_ID_106571()[pri:0, instance:com.tests.SpinBoxTest@409bf450]" started-at="2025-08-10T00:26:50 IST" name="TC_ID_106571" description="106571" finished-at="2025-08-10T00:26:51 IST" duration-ms="1370" status="PASS">
+        <test-method signature="TC_ID_106593()[pri:0, instance:com.tests.TumblerTest@6aeb35e6]" started-at="2025-08-10T21:59:10 IST" name="TC_ID_106593" description="106593" finished-at="2025-08-10T21:59:12 IST" duration-ms="2023" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_ID_106571 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.SpinBoxTest@409bf450]" started-at="2025-08-10T00:26:51 IST" name="tearDown" finished-at="2025-08-10T00:26:51 IST" duration-ms="82" status="PASS">
+        </test-method> <!-- TC_ID_106593 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.TumblerTest@6aeb35e6]" started-at="2025-08-10T21:59:12 IST" name="tearDown" finished-at="2025-08-10T21:59:13 IST" duration-ms="205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tests.SpinBoxTest -->
+      </class> <!-- com.tests.TumblerTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

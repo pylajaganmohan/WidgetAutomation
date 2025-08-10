@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tests.SpinBoxTest">
+      <class name="com.tests.TumblerTest">
         <methods>
           <include name="tearDown"/>
-          <include name="TC_ID_106569"/>
           <include name="setUp"/>
+          <include name="TC_ID_106593"/>
         </methods>
-      </class> <!-- com.tests.SpinBoxTest -->
+      </class> <!-- com.tests.TumblerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -156,16 +156,46 @@ public class SpinBoxTest extends BaseTest {
 	public void TC_ID_106569() {
 		spinBox = homePage.openSpinBoxWidget();
 		softAssert = new SoftAssert();
-		softAssert.assertTrue(spinBox.numberFormatting("n1"));
-		softAssert.assertTrue(spinBox.numberFormatting("n2"));
-		softAssert.assertTrue(spinBox.numberFormatting("n3"));
+		softAssert.assertEquals(spinBox.numberFormatting("n1"), "1.0");
+		softAssert.assertEquals(spinBox.numberFormatting("n2"), "1.00");
+		softAssert.assertEquals(spinBox.numberFormatting("n3"), "1.000");
 		softAssert.assertAll();
 	}
-	
+
 	@Test(description = "106571")
 	public void TC_ID_106571() {
 		spinBox = homePage.openSpinBoxWidget();
 		Assert.assertTrue(spinBox.ID_106571());
 	}
+
+	@Test(description = "106572")
+	public void TC_ID_106572() {
+		spinBox = homePage.openSpinBoxWidget();
+		Assert.assertEquals(spinBox.ID_106572(), "");
+	}
+	
+	@Test(description = "106573")
+	public void TC_ID_106573() {
+		spinBox = homePage.openSpinBoxWidget();
+		softAssert = new SoftAssert();
+		softAssert.assertTrue(spinBox.widgetSize("small"));
+		softAssert.assertTrue(spinBox.widgetSize("medium"));
+		softAssert.assertTrue(spinBox.widgetSize("large"));
+		softAssert.assertAll();
+	}
+	
+	@Test(description = "106574")
+	public void TC_ID_106574() {
+		spinBox = homePage.openSpinBoxWidget();
+		boolean isSame = false;
+		try {
+			isSame = ImageComparator.compareImages(spinBox.validateLayout(AppConstants.HORIZONTAL_LEFT),
+					AppConstants.SPINBOX_HORIZONTAL_LEFT);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Assert.assertTrue(isSame);
+	}
+	
 
 }

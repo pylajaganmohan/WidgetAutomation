@@ -17,4 +17,16 @@ public class HomePageTest extends BaseTest{
 	public void TC_ID_106552() {
 		Assert.assertTrue(homePage.ID_106552());
 	}
+	
+	
+	@Test(description = "106575")
+	public void TC_ID_106575() {
+		Assert.assertTrue(homePage.ID_106575());
+	}
+	
+	@Test(description = "106582")
+	public void TC_ID_106582() {
+		Assert.assertTrue(homePage.ID_106582());
+	}
+	
 }

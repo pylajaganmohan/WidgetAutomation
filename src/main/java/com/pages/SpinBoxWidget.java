@@ -12,7 +12,7 @@ public class SpinBoxWidget {
 
 	private String gearIcon = "button#config";
 	private String refresh = "button#refresh";
-	private String home = "button#home";
+	//private String home = "button#home";
 	private String okButton = "//span[text()='OK' and @id='ui-id-1-text']/parent::button";
 	private String disabledOption = "input#disabledOptions";
 	private String spinBox = "span.xrx-spinbox";
@@ -26,7 +26,8 @@ public class SpinBoxWidget {
 	private String upIcon = "//span[@class='xrx-icon up-icon']/parent::a";
 	private String numberFormat = "input#numberFormatOptions";
 	private String step = "input#stepOptions";
-
+	private String sizeOptions = "select#sizeOptions";
+	
 	// Constructor
 	public SpinBoxWidget(Page page) {
 		this.page = page;
@@ -82,7 +83,7 @@ public class SpinBoxWidget {
 		page.locator(layouts).selectOption(layout);
 		page.click(okButton);
 
-		String path = "screenshot/actualSpinBoxLayouts/actual-" + layout + ".png";
+		String path = "screenshot/actualImages/actual-spinbox-" + layout + ".png";
 		page.locator(spinBox).screenshot(new Locator.ScreenshotOptions().setPath(Paths.get(path)));
 		return path;
 	}
@@ -93,7 +94,7 @@ public class SpinBoxWidget {
 		page.click(okButton);
 		page.click(refresh);
 
-		String path = "screenshot/actualSpinBoxLayouts/actual-horizontal-left.png";
+		String path = "screenshot/actualImages/actual-spinbox-horizontal-left.png";
 		page.locator(spinBox).screenshot(new Locator.ScreenshotOptions().setPath(Paths.get(path)));
 		return path;
 	}
@@ -174,7 +175,7 @@ public class SpinBoxWidget {
 		return page.locator(spinBox).getAttribute("class").contains("max-range");
 	}
 
-	public boolean numberFormatting(String format) {
+	public String numberFormatting(String format) {
 		page.click(gearIcon);
 		page.locator(numberFormat).scrollIntoViewIfNeeded();
 		page.fill(numberFormat, format);
@@ -184,13 +185,13 @@ public class SpinBoxWidget {
 		
 		switch (format) {
 		case "n1":
-			return page.locator(spinboxValue).inputValue().contentEquals("1.0");
+			return page.locator(spinboxValue).inputValue();
 		case "n2":
-			return page.locator(spinboxValue).inputValue().contentEquals("1.00");
+			return page.locator(spinboxValue).inputValue();
 		case "n3":
-			return page.locator(spinboxValue).inputValue().contentEquals("1.000");
+			return page.locator(spinboxValue).inputValue();
 		default:
-			return false;
+			return "";
 		}
 	}
 	
@@ -204,4 +205,28 @@ public class SpinBoxWidget {
 		return page.locator(spinboxValue).inputValue().contentEquals("2");
 	}
 
+	public String ID_106572() {
+		page.click(gearIcon);
+		page.locator(step).scrollIntoViewIfNeeded();
+		String input = page.locator(step).inputValue();
+		return input;
+	}
+	
+	public boolean widgetSize(String size) {
+		page.click(gearIcon);
+		page.locator(sizeOptions).scrollIntoViewIfNeeded();
+		page.locator(sizeOptions).selectOption("xrx-"+size);
+		page.click(okButton);
+			
+		switch (size) {
+		case "small":
+			return page.locator(spinBox).getAttribute("class").contains("xrx-small");
+		case "medium":
+			return page.locator(spinBox).getAttribute("class").contains("xrx-medium");
+		case "large":
+			return page.locator(spinBox).getAttribute("class").contains("xrx-large");
+		default:
+			return false;
+		}
+	}
 }

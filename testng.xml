@@ -6,6 +6,7 @@
       <class name="com.tests.ButtonTest"/>
       <class name="com.tests.HomePageTest"/>
       <class name="com.tests.SpinBoxTest"/>
+      <class name="com.tests.TumblerTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

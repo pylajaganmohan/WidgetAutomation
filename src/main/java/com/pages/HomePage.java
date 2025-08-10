@@ -18,6 +18,8 @@ public class HomePage {
 		private String keyboradOrPad= "//button[text()='Keyboard/ pad']";
 		private String levelIndicator= "//button[text()='Level Indicator']";
 		private String spinBox = "//button[text()='Spin Box']";
+		private String toggleSwitch = "//button[text()='Toggle Switch']";
+		private String tumbler = "//button[text()='Tumbler']";
 		
 		public HomePage(Page page) {
 			this.page = page;
@@ -27,6 +29,7 @@ public class HomePage {
 			return page.textContent(title);
 		}
 		
+		//Widget Navigations
 		public ActionBarWidget openActionBar() {
 			page.click(actionBar);
 			return new ActionBarWidget(page);
@@ -42,8 +45,27 @@ public class HomePage {
 			return new SpinBoxWidget(page);
 		}
 		
+		public ToggleSwitchWidget openToggleSwitchWidget() {
+			page.click(toggleSwitch);
+			return new ToggleSwitchWidget(page);
+		}
+		
+		public TumblerWidget openTumblerWidget() {
+			page.click(tumbler);
+			return new TumblerWidget(page);
+		}
+		
+		//Test Actions
 		public boolean ID_106552() {
 			return page.locator(spinBox).isVisible();
+		}
+		
+		public boolean ID_106575() {
+			return page.locator(toggleSwitch).isVisible();
+		}
+		
+		public boolean ID_106582() {
+			return page.locator(tumbler).isVisible();
 		}
 		
 		

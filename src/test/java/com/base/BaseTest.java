@@ -12,6 +12,8 @@ import com.pages.ActionBarWidget;
 import com.pages.ButtonWidget;
 import com.pages.HomePage;
 import com.pages.SpinBoxWidget;
+import com.pages.ToggleSwitchWidget;
+import com.pages.TumblerWidget;
 
 public class BaseTest {
 
@@ -23,6 +25,9 @@ public class BaseTest {
 	protected ActionBarWidget actionBarPage;
 	protected ButtonWidget button;
 	protected SpinBoxWidget spinBox;
+	protected ToggleSwitchWidget toggle;
+	protected TumblerWidget tumbler;
+	
 	protected SoftAssert softAssert;
 
 	@BeforeMethod
